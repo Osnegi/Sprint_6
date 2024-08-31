@@ -1,24 +1,23 @@
 class Urls:
     MAIN_PAGE = 'https://qa-scooter.praktikum-services.ru/'
-    ORDER_PAGE = 'https://qa-scooter.praktikum-services.ru/order'
 
+class Data:
+    ORDER_PAGE_HEAD = "Для кого самокат"
+    ORDER_CONFIRMATION_HEAD = "Заказ оформлен"
+    DZEN_TITLE = "Дзен"
 
 class OrderData:
     NAME = 'Иван'
     SURNAME = 'Петров'
     ADDRESS = 'Улица Калинина, 12'
-    METRO = 'Сокольники'
     PHONE = '7916125125124'
-    DELIVERY_DATE = '01.09.2024'
-    RENT_TIME = 'сутки'
+    COMMENT = 'звонить в домофон'
 
     NAME_1 = 'Виктор'
     SURNAME_1 = 'Сидоров'
     ADDRESS_1 = 'Проспект Мира, 100'
-    METRO_1 = 'Чистые пруды'
     PHONE_1 = '+791612512512'
-    DELIVERY_DATE_1 = '31.08.2024'
-    RENT_TIME_1 = 'двое суток'
+    COMMENT_1 = 'стучать в дверь'
 
 class QuestionData:
     ANSWER_0_TEXT = 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'

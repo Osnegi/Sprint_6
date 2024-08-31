@@ -1,10 +1,15 @@
 from selenium.webdriver.common.by import By
 
-
 class MainPageLocators:
 
-    #ORDER_TOP_BUTTON = (By.XPATH, '//button[@class = 'Button_Button__ra12g']')
-    #ORDER_BOTTOM_BUTTON = (By.XPATH, '//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM']')
+    ACCEPT_COOKIES_BUTTON = [By.XPATH, '//button[@id="rcc-confirm-button"]']
+    ORDER_TOP_BUTTON = (By.XPATH, '//button[@class = "Button_Button__ra12g"]')
+    ORDER_BOTTOM_BUTTON = (By.XPATH, '//button[@class = "Button_Button__ra12g Button_Middle__1CSJM"]')
+
+    YANDEX_LOGO = (By.XPATH, '//*[@href="//yandex.ru" and contains(@class, "Header_LogoYandex")]')
+    DZEN_TITLE = (By.XPATH, '//title[contains(text(), "Дзен")]')
+    SAMOKAT_LOGO = (By.XPATH, '//*[contains(@class, "Header_LogoScooter")]')
+    MAIN_PAGE_HEAD = (By.XPATH, '//*[contains(@class, "Home_Header") and text() = "Самокат "]')
 
     QUESTION_0 = (By.XPATH, '// *[ @ id = "accordion__heading-0"]')
     QUESTION_1 = (By.XPATH, '// *[ @ id = "accordion__heading-1"]')

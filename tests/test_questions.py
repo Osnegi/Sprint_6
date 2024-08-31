@@ -1,7 +1,7 @@
 import pytest
+import allure
 from data import QuestionData, Urls
 from locators.main_page_locators import MainPageLocators
-from pages.login_page import LoginPage
 from pages.main_page import MainPage
 
 
@@ -21,9 +21,10 @@ class TestQuestion:
         [MainPageLocators.QUESTION_7, MainPageLocators.ANSWER_7, QuestionData.ANSWER_7_TEXT]
     ])
     def test_question(self, driver, question_locator, answer_locator, expected_answer):
+        page = MainPage(driver)
+        page.open_page(Urls.MAIN_PAGE)
+        page.click_accept_cookies_button()
+        assert page.get_answer(question_locator, answer_locator) == expected_answer
 
-        element = MainPage(driver)
-        element.open_page(Urls.MAIN_PAGE)
-        element.click_element(question_locator)
 
-        assert element.get_answer(question_locator, answer_locator) == expected_answer
+
