@@ -48,10 +48,6 @@ class OrderPage(BasePage):
         self.wait_and_find_element(OrderPageLocators.COMMENT_INPUT)
         self.input_data(OrderPageLocators.COMMENT_INPUT, comment)
 
-        #self.click_element(OrderPageLocators.MAKE_ORDER_BUTTON)
-        #self.wait_and_find_element(OrderPageLocators.ORDER_CONFIRMATION_BUTTON)
-        #self.click_element(OrderPageLocators.ORDER_CONFIRMATION_BUTTON)
-
     @allure.step('Убедиться, что кнопка "Далее" стала кликабельной (все поля заполнены корректно) и нажать на нее')
     def wait_and_click_next_button(self):
         self.wait_and_find_element(OrderPageLocators.NEXT_BUTTON)
